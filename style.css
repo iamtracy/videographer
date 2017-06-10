@@ -1,0 +1,365 @@
+/*
+Theme Name: Videographer
+Theme URI: 
+Author: Tracy Lee
+Author URI: https://iamtracylee.com
+Description: A simple WordPress theme for videographers
+Template: twentyseventeen
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentyseventeen
+Tags: Foundation 6
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+/* ----------------------------------------------------------------------------
+ * Child Theme Style.css styles begin here!
+ * ------------------------------------------------------------------------- */
+
+.site-logo {
+    margin: 1.85rem auto 1.26rem;
+    width: 100%;
+    max-width: 200px;
+}
+
+html {
+    margin-top: 0 !important;
+    overflow-y: scroll;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+span.tagline {
+    font-size: 1.1rem;
+    color: #c3c3c3;
+    vertical-align: middle;
+}
+
+.tagline-divider {
+    font-size: 0.8rem;
+    color: #c3c3c3;
+    vertical-align: middle;
+}
+
+.menu-list {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    list-style: none;
+    margin: 0 auto;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0px;
+    text-align: center;
+}
+
+.menu-list li {
+    letter-spacing: 0.21rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.menu-list li a {
+    padding: .2rem .01rem;
+}
+
+.menu-list li a,
+.email a,
+.fa {
+    color: #212121;
+}
+
+.menu-list .active a {
+    color: #585858;
+}
+
+ul#responsive-menu {
+    text-transform: uppercase;
+}
+
+.fa {
+    font-size: 1.15rem;
+}
+
+.content {
+    margin: 2.1rem 0 2.9rem;
+}
+
+.responsive-embed {
+    margin-bottom: 0;
+}
+
+.card-section-container {
+    margin-top: 1rem;
+}
+
+.email {
+    margin-bottom: 1rem;
+}
+
+.name {
+    margin-bottom: 1.2rem;
+}
+
+
+/*
+Video Cards
+*/
+
+.card {
+    border: none;
+    position: relative;
+    border-radius: 0;
+}
+
+.card-section {
+    padding: 0;
+}
+
+span.image-hover-wrapper-reveal {
+    position: absolute;
+    z-index: 101;
+    bottom: 0;
+    left: 15%;
+    width: 70%;
+    color: #fff;
+    font-size: 1.1rem;
+    letter-spacing: .06rem;
+    opacity: 0;
+    transition: all .28s ease-in;
+}
+
+.card:hover span.image-hover-wrapper-reveal {
+    opacity: .95;
+    bottom: 26.5%;
+}
+
+.card:hover .overlay {
+    position: absolute;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+}
+
+.reveal {
+    padding: 0;
+    border: 0 solid #cacaca;
+}
+
+.vimeo {
+    margin-bottom: 1.3rem;
+    margin: 0 0.03rem 1rem;
+}
+
+
+/*
+Hemo Image
+*/
+
+.hero-section {
+    height: 35vh;
+    max-height: 375px;
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center 0;
+}
+
+.hero-section .hero-section-text {
+    color: #fefefe;
+    text-shadow: 1px 1px 2px #0a0a0a;
+    z-index: 9999;
+}
+
+.title {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 3rem;
+}
+
+.separator {
+    background-color: #fff;
+    position: relative;
+    width: 40px;
+    display: block;
+    height: 1px;
+    margin: 7px auto 7px;
+}
+
+.overlay-img {
+    position: relative;
+}
+
+.overlay-img:after {
+    background-color: #000;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    z-index: 100;
+}
+
+.banner {
+    margin-bottom: 2.75rem;
+}
+
+.fa-play {
+    position: absolute;
+    right: .2rem;
+    top: .2rem;
+}
+
+
+/*Define entire site max width*/
+
+.row {
+    max-width: 72rem;
+}
+
+
+/*Equipment page row vertical spacing*/
+
+.so-panel {
+    margin-bottom: 0 !important;
+    padding-bottom: 0.8rem;
+}
+
+#equipment+div .panel-grid {
+    border-bottom: 1px solid #e0dddd;
+}
+
+#equipment+div .panel-grid,
+#about .panel-grid,
+#pg-20-1 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+#equipment+div .panel-grid-cell {
+    padding-left: 0;
+    padding-right: 42px;
+    margin-bottom: 0;
+}
+
+#equipment+div .panel-grid:last-child {
+    border-bottom: none;
+}
+
+.equip-copy p {
+    line-height: 1.15rem;
+    font-size: 0.9rem;
+}
+
+.equip-copy h3 {
+    font-size: 1.6rem;
+    margin-bottom: .1rem;
+}
+
+
+/*
+Sets the top and bottom border
+for the About page company logo row
+*/
+
+.about-company-logo-row {
+    border-top: 1px solid #e0dddd;
+    border-bottom: 1px solid #e0dddd;
+}
+
+
+/*
+Custom About Table styling
+*/
+
+.table>tbody>tr>th {
+    border-top: none;
+}
+
+table tbody tr:nth-child(even) {
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+}
+
+table thead,
+table tbody,
+table tfoot {
+    border: none;
+    background-color: #fff;
+}
+
+tr {
+    border-top: 1px solid #eee;
+}
+
+tbody tr:last-child {
+    border: none;
+}
+
+tr td:first-child {
+    width: 380px;
+}
+
+tr td:nth-child(2) {
+    max-width: 100px;
+}
+
+
+/*
+Footer Icons
+*/
+
+.social-icon {
+    width: 5%;
+    max-width: 43px;
+    margin-top: 0.34rem;
+}
+
+.city,
+.email {
+    margin-bottom: 0.15rem;
+}
+
+.city {
+    font-weight: 500;
+    font-size: 1.07rem;
+}
+
+footer {
+    margin-bottom: 1.6rem;
+}
+
+@media screen and (max-width: 780px) {
+    .tagline {
+        display: block;
+    }
+    .tagline-divider {
+        display: none;
+    }
+    #pg-20-0 {
+        margin-bottom: 0 !important;
+    }
+    #pg-20-1 {
+        display: none;
+    }
+}
